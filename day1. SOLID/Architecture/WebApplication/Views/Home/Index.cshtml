@@ -1,0 +1,18 @@
+﻿@model List<WebApplication.Models.ItemViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ul>
+@foreach (var item in Model)
+{
+  <li>
+    @Html.DisplayFor(modelItem => item.Id) @Html.DisplayFor(modelItem => item.Price)
+  </li>
+}
+</ul>
+
