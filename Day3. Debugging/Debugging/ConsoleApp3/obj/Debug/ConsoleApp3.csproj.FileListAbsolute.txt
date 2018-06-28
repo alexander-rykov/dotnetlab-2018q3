@@ -1,0 +1,7 @@
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+D:\.NET lab\Day3 Debugging\Debugging\ConsoleApp3\obj\Debug\ConsoleApp3.csprojAssemblyReference.cache
