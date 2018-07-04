@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using DAL.Context;
 
@@ -18,15 +19,18 @@ namespace EF_Task
             {
                 await context.Customers.CountAsync(); //Do not delete this line. It triggers configuration check for database
 
-                Process(context);
+                await Process(context);
             }
 
             Console.WriteLine("Main Async Completed");
         }
 
 
-        //TODO: get all customers with it orders (skip items & order_items data) in a 1 SQL query. Use SQL Profiler to ensure that only 1 query has been executed.
-        static void Process(AppDbContext context)
+        //TODO: Grab all tables data in a 1 SQL query.
+        //TODO: Use eager loading with nested LINQ Select queries to achieve that.
+        //TODO: Use SQL Profiler to ensure that only 1 query has been executed. 
+        //TODO: SQL Query result (can be checked via SQL management studio) must looks like denormalized data from initial "Internation widgets.xlsx" file 
+        static async Task Process(AppDbContext context)
         {
 
         }
