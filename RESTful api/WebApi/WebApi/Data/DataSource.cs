@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -13,7 +15,7 @@ namespace Task.Data
 		private static List<Customer> customerList;
 		private static List<Supplier> supplierList;
 
-		public List<Product> Products
+		public static List<Product> Products
 		{
 			get
 			{
@@ -24,7 +26,7 @@ namespace Task.Data
 			}
 		}
 
-		public List<Supplier> Suppliers
+		public static List<Supplier> Suppliers
 		{
 			get
 			{
@@ -35,7 +37,7 @@ namespace Task.Data
 			}
 		}
 
-		public List<Customer> Customers
+		public static List<Customer> Customers
 		{
 			get
 			{
@@ -46,7 +48,7 @@ namespace Task.Data
 			}
 		}
 
-		private void createLists()
+		private static void createLists()
 		{
 			// Product data created in-memory using collection initializer:
 			productList =
@@ -163,9 +165,16 @@ namespace Task.Data
 				};
 
 
-			customerList = (
-				from e in XDocument.Parse(Properties.Resources.Customers).
-						  Root.Elements("customer")
+		    var path = AppDomain.CurrentDomain.BaseDirectory;
+		    var xmlFilePath = "Data\\customers.xml";
+		    var fullPath = Path.Combine(path, xmlFilePath);
+		    var text = File.ReadAllText(fullPath);
+
+		    var doc = XDocument.Parse(text);
+
+
+            customerList = (
+				from e in doc.Root.Elements("customer")
 				select new Customer
 				{
 					CustomerID = (string)e.Element("id"),
