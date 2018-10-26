@@ -12,12 +12,12 @@ namespace ConsoleApp3
   {
     static void Main(string[] args)
     {
-      var test = new TestClass(); // DebuggerDisplay filter
-      test.Number = 100;
+      var test = new TestClass {Number = 100}; // DebuggerDisplay filter
 
       System.Diagnostics.Debug.WriteLineIf(test.Number == 100, "test.Number equals to 100");
-      var x = Factorial(10);
-      Console.WriteLine(x);
+      var number = 10;
+      var factOfNumber = Factorial(number);
+      Console.WriteLine(factOfNumber);
       Console.ReadKey();
     }
 
