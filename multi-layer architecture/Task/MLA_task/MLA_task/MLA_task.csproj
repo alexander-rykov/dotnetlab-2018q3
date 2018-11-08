@@ -237,14 +237,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="EF\DbInitializer.cs" />
-    <Compile Include="EF\DemoCommonInfoDbModelConfig.cs" />
-    <Compile Include="EF\DemoCommonInfoModel.cs" />
-    <Compile Include="EF\DemoContext.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="EF\DemoDbModelConfig.cs" />
-    <Compile Include="EF\DemoModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -362,6 +356,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyResolver\DependencyResolver.csproj">
+      <Project>{e96459c5-daea-4fc5-aa77-d262eddf0121}</Project>
+      <Name>DependencyResolver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLA_task.BLL.Interface\MLA_task.BLL.Interface.csproj">
+      <Project>{d701022c-1eb9-4f99-820a-a0c3de62cd60}</Project>
+      <Name>MLA_task.BLL.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

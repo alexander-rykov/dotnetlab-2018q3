@@ -5,7 +5,6 @@ using System.Web.Http;
 using AutoMapper;
 using FluentValidation;
 using FluentValidation.WebApi;
-using MLA_task.EF;
 using NLog;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
@@ -33,7 +32,7 @@ namespace MLA_task
 
         private static void RegisterContainer(Container container)
         {
-            container.Register<DemoContext>();
+           DependencyResolver.DependencyResolver.Resolve(container);
         }
 
         private static Assembly[] GetAssemblies()

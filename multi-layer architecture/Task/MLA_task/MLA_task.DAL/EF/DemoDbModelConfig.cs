@@ -1,8 +1,9 @@
 ﻿using System.Data.Entity.ModelConfiguration;
+using MLA_task.DAL.Interface.Entities;
 
-namespace MLA_task.EF
+namespace MLA_task.DAL.EF
 {
-    public class DemoDbModelConfig : EntityTypeConfiguration<DemoModel>
+    public class DemoDbModelConfig : EntityTypeConfiguration<DemoDbModel>
     {
         public DemoDbModelConfig()
         {

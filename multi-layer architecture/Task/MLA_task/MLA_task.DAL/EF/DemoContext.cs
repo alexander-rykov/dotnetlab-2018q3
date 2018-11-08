@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
+using MLA_task.DAL.Interface.Entities;
 
-namespace MLA_task.EF
+namespace MLA_task.DAL.EF
 {
     public class DemoContext : DbContext
     {
@@ -9,8 +10,8 @@ namespace MLA_task.EF
             Database.SetInitializer(new DbInitializer());
         }
 
-        public IDbSet<DemoModel> DemoDbModels { get; set; }
-        public IDbSet<DemoCommonInfoModel> DemoCommonInfoModels { get; set; }
+        public IDbSet<DemoDbModel> DemoDbModels { get; set; }
+        public IDbSet<DemoCommonInfoDbModel> DemoCommonInfoModels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
