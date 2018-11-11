@@ -45,8 +45,13 @@ namespace MLA_task.Controllers
             }
             catch (DemoServiceException ex)
             {
-                _logger.Info(ex, $"Wrong ID {id} has been requested");
-                return this.BadRequest("Wrong ID");
+                if (ex.Error == DemoServiceException.ErrorType.WrongId) 
+                {
+                    _logger.Info(ex, $"Wrong ID {id} has been requested");
+                    return this.BadRequest("Wrong ID");
+                }
+
+                throw;
             }
             catch (Exception ex)
             {
