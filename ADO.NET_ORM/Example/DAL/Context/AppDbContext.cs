@@ -1,11 +1,12 @@
 ﻿using System.Data.Entity;
+using DAL.Configuration;
 using DAL.Entities;
 
 namespace DAL.Context
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext() : base("InternationalWidgets")
+        public AppDbContext() : base("InternationWidgets")
         {
             
         }
